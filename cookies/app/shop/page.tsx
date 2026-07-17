@@ -1,12 +1,12 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Showcase } from "@/components/showcase"
+import { Shop } from "@/components/shop"
 
 export default function Home() {
   return (
     <>
       <Header/>
-      <Showcase/>
+      <Shop/>
       <Footer/>
     </>
   );
