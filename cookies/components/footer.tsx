@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer(){
 
     return(
@@ -5,22 +7,25 @@ export function Footer(){
             <hr></hr>
             <div className="footer_nav">
                 <h3>Quick Links</h3>
-                <div><a href='about'>About</a></div>
-                <div><a href='search'>Search</a></div>
-                <div><a href='cart'>Cart</a></div>
+                <div><Link href='/'>Home</Link></div>
+                <div><Link href='/about'>About</Link></div>
+                <div><Link href='/search'>Search</Link></div>
+                <div><Link href='/cart'>Cart</Link></div>
             </div>
             <div className="contact">
                 <h3>Contact Us</h3>
                 <div className="socmed">
-                    <div>[Icon]</div>
-                    <div>Facebook</div>
-                </div>
-                <div className="socmed">
-                    <div>[Icon]</div>
-                    <div>Instagram</div>
+                    <a href="https://www.instagram.com/puppincookies/">
+                        <div><img src="https://picsum.photos/40" alt="Instagram Icon"></img></div>
+                        <div>Instagram</div>
+                    </a>
+                    
                 </div>
             </div>
-            <p>Disclaimer: Only for fun</p>
+            <p>
+                Disclaimer: This website is created as a personal project for 
+                Phoebe Bangco. 
+            </p>
             <p>&copy; Puppin'</p>
             <p>{new Date().getFullYear()}</p>
         </footer>

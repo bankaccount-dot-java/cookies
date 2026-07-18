@@ -1,15 +1,24 @@
+import Link from "next/link";
+
 export function Header(){
 
     return(
         <header>
-            <h1><a href="/">Puppin'</a></h1>
+            <div>
+                <Link href="/">
+                    <img src="https://picsum.photos/100" alt="Puppin' Logo"></img>
+                    <h1>Puppin'</h1>
+                </Link>
+            </div>
+            
             <div className="nav">
-                <div><a href='about'>About</a></div>
-                <div><a href='search'>Search</a></div>
-                <div><a href='cart'>Cart</a></div>
+                <div><Link href='/about'>About</Link></div>
+                <div><Link href='/search'>Search</Link></div>
+                <div><Link href='/cart'>Cart</Link></div>
             </div>
             <hr></hr>
         </header>
 
     );
 }
+

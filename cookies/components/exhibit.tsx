@@ -1,16 +1,5 @@
 import { Cookie } from "@/components/cookie"
-
-const exhibit = [
-    { name: "The Pawfect Chip", description: "choco chip cookie", price: 65 },
-    { name: "Dalmation Delight", description: "cookies n' cream", price: 75 },
-    { name: "Happy Tail Mix", description: "candy crunch cookie", price: 75 },
-    { name: "Peanut Pawcket", description: "peanut butter cookie", price: 75 },
-];
-
-const new_products = [
-    { name: "New!", description: "N/A", price: 45 },
-    { name: "Newer!", description: "N/A", price: 50 },
-];
+import { cookiesData } from "@/data/cookies"
 
 
 export function Exhibit(){
@@ -18,23 +7,17 @@ export function Exhibit(){
         <div>
             <div className="new">
                 <h2>New Products</h2>
-                {new_products.map((cookie) => (
-                    <Cookie
-                        key={cookie.name}
-                        name={cookie.name}
-                        description={cookie.description}
-                        price={cookie.price}
-                    />
-                ))}
             </div>
             <div className="exhibit">
                 <h2>Exhibit</h2>
-                {exhibit.map((cookie) => (
+                {cookiesData.map((cookie) => (
                     <Cookie
-                        key={cookie.name}
+                        key={cookie.slug}
+                        slug={cookie.slug}
                         name={cookie.name}
                         description={cookie.description}
                         price={cookie.price}
+                        image={cookie.image}
                     />
                 ))}
             </div>
