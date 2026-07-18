@@ -1,8 +1,8 @@
-export function Shop(){
+export function Search(){
 
     return(
         <p>
-            poopy butt
+            Search
         </p>
 
     );
