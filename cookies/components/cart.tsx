@@ -1,9 +1,12 @@
 export function Cart(){
 
     return(
-        <p>
-            This is what you have added to your cart.
-        </p>
+        <div className="text-center">
+            <p>
+                This is what you have added to your cart.
+            </p>
+        </div>
+        
 
     );
 }

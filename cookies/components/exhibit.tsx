@@ -5,12 +5,12 @@ import { cookiesData } from "@/data/cookies"
 export function Exhibit(){
     return(
         <div>
-            <div className="new">
+            <div className="text-center">
                 <h2>New Products</h2>
             </div>
             <div className="exhibit">
-                <h2>Exhibit</h2>
-                {cookiesData.map((cookie) => (
+                <h2 className="text-center">Exhibit</h2>
+                {cookiesData.map((cookie, index) => (
                     <Cookie
                         key={cookie.slug}
                         slug={cookie.slug}
@@ -18,6 +18,7 @@ export function Exhibit(){
                         description={cookie.description}
                         price={cookie.price}
                         image={cookie.image}
+                        isEven={index % 2 == 0}
                     />
                 ))}
             </div>

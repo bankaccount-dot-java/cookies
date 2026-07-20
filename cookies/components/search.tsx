@@ -1,9 +1,12 @@
 export function Search(){
 
     return(
-        <p>
-            Search
-        </p>
+        <div className="text-center">
+            <p>
+                Search
+            </p>
+        </div>
+        
 
     );
 }
